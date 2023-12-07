@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gLD-C5-8HI">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reminders-->
+        <scene sceneID="jzO-xT-D1a">
+            <objects>
+                <tableViewController id="aoF-cI-ejq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Reminders" id="Ku8-kq-RIe">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="yId-QA-JU9">
+                            <connections>
+                                <segue destination="B78-z3-8Vl" kind="presentation" id="2db-yW-bd8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZR4-dS-CVf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="-98.50074962518741"/>
+        </scene>
+        <!--Add Reminder-->
+        <scene sceneID="ilW-yd-phw">
+            <objects>
+                <viewController id="caY-IX-ZpR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ImO-5p-vIg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What Do You Need To Remember?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cRh-cd-QM7">
+                                <rect key="frame" x="16" y="71" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="plN-zQ-peD">
+                                <rect key="frame" x="0.0" y="242" width="375" height="216"/>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="plN-zQ-peD" firstAttribute="leading" secondItem="Hxn-iK-fjy" secondAttribute="leading" id="C0V-9H-kjE"/>
+                            <constraint firstItem="Hxn-iK-fjy" firstAttribute="trailing" secondItem="cRh-cd-QM7" secondAttribute="trailing" constant="16" id="eQf-05-dOz"/>
+                            <constraint firstItem="cRh-cd-QM7" firstAttribute="top" secondItem="Hxn-iK-fjy" secondAttribute="top" constant="15" id="ghm-nz-EaT"/>
+                            <constraint firstItem="plN-zQ-peD" firstAttribute="top" secondItem="cRh-cd-QM7" secondAttribute="bottom" constant="137" id="iLg-ki-LEU"/>
+                            <constraint firstItem="cRh-cd-QM7" firstAttribute="leading" secondItem="Hxn-iK-fjy" secondAttribute="leading" constant="16" id="lT8-a9-R3d"/>
+                            <constraint firstItem="plN-zQ-peD" firstAttribute="trailing" secondItem="Hxn-iK-fjy" secondAttribute="trailing" id="xmJ-2b-owQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hxn-iK-fjy"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Reminder" id="KeN-R4-wnc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="c17-EY-kXy"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5xR-eY-fz5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2850.4000000000001" y="-98.50074962518741"/>
+        </scene>
+        <!--Reminders Navigation Controller-->
+        <scene sceneID="eeS-Sn-Qqd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gLD-C5-8HI" userLabel="Reminders Navigation Controller" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IOY-6r-Rb8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aoF-cI-ejq" kind="relationship" relationship="rootViewController" id="XIM-9c-QZs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NEQ-Jq-VU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47.200000000000003" y="-98.50074962518741"/>
+        </scene>
+        <!--Add Reminder Navigation Controller-->
+        <scene sceneID="NmF-CZ-pYu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B78-z3-8Vl" userLabel="Add Reminder Navigation Controller" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w6Z-Ys-Pah">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="caY-IX-ZpR" kind="relationship" relationship="rootViewController" id="Ngk-v5-HbU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gbV-05-zjC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1911.2" y="-98.50074962518741"/>
+        </scene>
+    </scenes>
+</document>
